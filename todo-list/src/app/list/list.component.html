@@ -1,0 +1,15 @@
+<div class="mt5 container">
+    <div class="alert alert-primary">Topic {{ topicId }}</div>
+    <div class="input-group my-2">
+        <input class="from-control" id="topic" [formControl]="todo">
+        <button class="btn btn-primary" (click)="onAddTodo()">
+            <i class="bi bi-plus-circle"></i>
+        </button>
+    </div>
+    @for (todo of list; track $index) {
+        <div ngFor="let topic of topics; let i = index" class="alert alert-secondary">
+            <i class="bi bi-x-circle-fill" (click)="onRemoveTodo(todo.id)" title="Remove Topic"></i>
+            <span>{{ todo.todo }}</span>
+        </div>
+    }
+</div>

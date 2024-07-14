@@ -1,0 +1,9 @@
+.alert .bi-x-circle-fill:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.alert span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
